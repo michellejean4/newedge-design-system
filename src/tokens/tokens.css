@@ -1,0 +1,131 @@
+/* =====================================================================
+   NewEdge Wealth — Design Tokens
+   Extracted from the NewEdge "Foundations & Guidelines" Figma file.
+   These CSS custom properties are the single source of truth for the
+   look of every component. Change a value here and it updates everywhere.
+   ===================================================================== */
+
+:root {
+  /* ---- Primitive palette · Navy ramp ---------------------------------
+     One hue covers every surface, border, and text color. */
+  --ne-navy-1000: #05070e;
+  --ne-navy-950:  #070b17;
+  --ne-navy-900:  #0a1020;
+  --ne-navy-850:  #0f1628;
+  --ne-navy-800:  #141c31;
+  --ne-navy-700:  #1a2239;
+  --ne-navy-600:  #222c46;
+  --ne-navy-500:  #2e3a5c;
+  --ne-navy-400:  #3e4a6a;
+  --ne-navy-300:  #5a6785;
+  --ne-navy-200:  #8892ab;
+  --ne-navy-100:  #c5ccdb;
+  --ne-navy-0:    #f5f7fb;
+
+  /* ---- Accent · Blue ---- */
+  --ne-blue-700: #163a99;
+  --ne-blue-600: #1f4fcc;
+  --ne-blue-500: #2e6bff;
+  --ne-blue-400: #5b8cff;
+  --ne-blue-300: #8aadff;
+
+  /* ---- Accent · Green ---- */
+  --ne-green-600: #00a06b;
+  --ne-green-500: #00c281;
+  --ne-green-400: #2ee0a3;
+
+  /* ---- Accent · Red ---- */
+  --ne-red-600: #e03e52;
+  --ne-red-500: #ff5b6e;
+  --ne-red-400: #ff8591;
+
+  /* ---- Accent · Amber ---- */
+  --ne-amber-600: #d4860a;
+  --ne-amber-500: #f5a524;
+  --ne-amber-400: #ffc15e;
+
+  /* ---- Semantic · Surfaces (background depth) ---- */
+  --ne-bg-0: #05070e;   /* app canvas, deepest */
+  --ne-bg-1: #0a1020;   /* cards, panels */
+  --ne-bg-2: #0f1628;   /* raised surface */
+  --ne-bg-3: #141c31;   /* inputs, hover */
+  --ne-bg-4: #1a2239;   /* active / pressed */
+  --ne-bg-sidebar: #070b17;
+
+  /* ---- Semantic · Text ---- */
+  --ne-text-0: #f5f7fb; /* highest contrast — titles */
+  --ne-text-1: #c5ccdb; /* body */
+  --ne-text-2: #8892ab; /* secondary / labels */
+  --ne-text-3: #5a6785; /* muted / placeholder */
+  --ne-text-4: #3e4a6a; /* disabled */
+
+  /* ---- Semantic · Borders ---- */
+  --ne-border-0: #1a2239; /* subtle hairline */
+  --ne-border-1: #222c46; /* default */
+  --ne-border-2: #2e3a5c; /* strong / focus-adjacent */
+
+  /* ---- Semantic · Status ---- */
+  --ne-status-positive: #00c281;
+  --ne-status-negative: #ff5b6e;
+  --ne-status-warning:  #f5a524;
+  --ne-status-info:     #2e6bff;
+
+  /* ---- Data-viz categorical ---- */
+  --ne-dv-1: #2e6bff;
+  --ne-dv-2: #22c5e0;
+  --ne-dv-3: #00c281;
+  --ne-dv-4: #8b5cf6;
+  --ne-dv-5: #f5a524;
+  --ne-dv-6: #e85ca8;
+
+  /* ---- Typography · Families ---- */
+  --ne-font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --ne-font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  /* ---- Typography · Weights ---- */
+  --ne-weight-regular: 400; /* body */
+  --ne-weight-medium:  500; /* UI labels */
+  --ne-weight-semibold:600; /* headings */
+  --ne-weight-bold:    700; /* display only */
+
+  /* ---- Typography · Type scale (size / line-height / tracking) ---- */
+  --ne-display-size: 28px;
+  --ne-display-tracking: -0.02em;
+  --ne-title-l-size: 20px;
+  --ne-title-s-size: 13px;
+  --ne-body-size: 13px;
+  --ne-body-line: 1.5;          /* 150% */
+  --ne-caption-size: 11px;
+  --ne-eyebrow-size: 10px;
+  --ne-eyebrow-tracking: 0.12em;
+  --ne-mono-size: 12px;
+
+  /* ---- Spacing · 4pt base ---- */
+  --ne-space-1: 4px;
+  --ne-space-2: 8px;
+  --ne-space-3: 12px;
+  --ne-space-4: 16px;
+  --ne-space-6: 24px;
+  --ne-space-8: 32px;
+  --ne-space-12: 48px;
+  --ne-space-16: 64px;
+
+  /* ---- Radius ---- */
+  --ne-radius-xs: 4px;    /* checkboxes, inline tags */
+  --ne-radius-sm: 6px;    /* small buttons */
+  --ne-radius-md: 8px;    /* buttons, inputs, dropdowns */
+  --ne-radius-lg: 12px;   /* cards, panels */
+  --ne-radius-xl: 16px;   /* modals, sheets */
+  --ne-radius-pill: 999px;/* chips, badges, toggles, avatars */
+
+  /* ---- Elevation (dark UI: depth from shadow + surface lift) ---- */
+  --ne-shadow-1: 0 1px 2px rgba(0, 0, 0, 0.40);   /* dropdowns, tooltips */
+  --ne-shadow-2: 0 8px 24px rgba(0, 0, 0, 0.35);  /* toasts, floating panels */
+  --ne-shadow-3: 0 24px 64px rgba(0, 0, 0, 0.50); /* modals, sheets */
+  --ne-shadow-glow: 0 0 0 3px rgba(46, 107, 255, 0.45); /* keyboard focus ring */
+
+  /* ---- Breakpoints (reference values) ---- */
+  --ne-bp-sm: 599px;   /* mobile  ≤ 599 */
+  --ne-bp-md: 1023px;  /* tablet  600–1023 */
+  --ne-bp-lg: 1024px;  /* desktop ≥ 1024 */
+}

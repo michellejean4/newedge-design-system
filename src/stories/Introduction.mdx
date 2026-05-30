@@ -1,0 +1,57 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Introduction" />
+
+<div style={{ fontFamily: "'Inter', system-ui, sans-serif" }}>
+
+<p style={{ fontSize: 10, fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#5b8cff', margin: 0 }}>
+  NewEdge Wealth
+</p>
+
+# Design System
+
+A React + TypeScript component library built directly from the **NewEdge Wealth — Foundations & Guidelines** design tokens in Figma. Every component renders against the same colors, type, spacing, radius, and elevation values defined by the design team.
+
+---
+
+## What's inside
+
+**Foundations** — the raw design tokens, visualized:
+
+- **Colors** — the navy ramp plus blue / green / red / amber accents
+- **Typography** — Inter (UI & headings) and JetBrains Mono (figures)
+- **Spacing** — a 4-pt base scale
+- **Radius** — corner rounding from `xs` to `pill`
+- **Elevation** — shadow levels and the focus glow
+
+**Components** — the starter set, all token-driven:
+
+| Component | Use |
+|---|---|
+| Button | Primary, secondary, tertiary, danger actions |
+| Input | Text fields with labels, hints, and errors |
+| Card | Surface container for content & metrics |
+| Badge | Status labels and metric deltas |
+| Avatar | Identity tokens with initials fallback |
+| Checkbox | Multi-select options |
+| Toggle | On/off switches |
+| Alert | Inline info / success / warning / error banners |
+
+---
+
+## Using a component in code
+
+```tsx
+import { Button, Card, Badge } from '../components';
+
+<Card eyebrow="Total portfolio" title="Net worth $247.8M"
+      action={<Badge variant="positive">+4.2%</Badge>}>
+  Allocation is on target.
+  <Button>View details</Button>
+</Card>
+```
+
+The look comes entirely from CSS variables in `src/tokens/tokens.css`. Change a
+token there and every component updates at once.
+
+</div>

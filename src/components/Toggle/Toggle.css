@@ -1,0 +1,56 @@
+.ne-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--ne-space-2);
+  font-family: var(--ne-font-sans);
+  font-size: var(--ne-body-size);
+  color: var(--ne-text-1);
+  cursor: pointer;
+  user-select: none;
+}
+
+.ne-toggle--disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.ne-toggle__input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.ne-toggle__track {
+  position: relative;
+  width: 36px;
+  height: 20px;
+  border-radius: var(--ne-radius-pill);
+  background: var(--ne-bg-4);
+  border: 1px solid var(--ne-border-2);
+  transition: background 140ms ease, border-color 140ms ease, box-shadow 140ms ease;
+}
+
+.ne-toggle__thumb {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 14px;
+  height: 14px;
+  border-radius: var(--ne-radius-pill);
+  background: var(--ne-navy-100);
+  transition: transform 140ms ease, background 140ms ease;
+}
+
+.ne-toggle__input:checked + .ne-toggle__track {
+  background: var(--ne-blue-500);
+  border-color: var(--ne-blue-500);
+}
+.ne-toggle__input:checked + .ne-toggle__track .ne-toggle__thumb {
+  transform: translateX(16px);
+  background: var(--ne-navy-0);
+}
+
+.ne-toggle__input:focus-visible + .ne-toggle__track {
+  box-shadow: var(--ne-shadow-glow);
+}

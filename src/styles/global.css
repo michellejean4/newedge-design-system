@@ -1,0 +1,40 @@
+/* NewEdge global base styles — applied inside Storybook's preview canvas */
+
+/* Font faces (bundled locally via @fontsource, no network needed) */
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/600.css';
+@import '@fontsource/inter/700.css';
+@import '@fontsource/jetbrains-mono/400.css';
+@import '@fontsource/jetbrains-mono/500.css';
+
+@import '../tokens/tokens.css';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.ne-root {
+  background: var(--ne-bg-0);
+  color: var(--ne-text-1);
+  font-family: var(--ne-font-sans);
+  font-size: var(--ne-body-size);
+  line-height: var(--ne-body-line);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Helper utility classes for documentation typography */
+.ne-eyebrow {
+  font-size: var(--ne-eyebrow-size);
+  font-weight: var(--ne-weight-semibold);
+  letter-spacing: var(--ne-eyebrow-tracking);
+  text-transform: uppercase;
+  color: var(--ne-blue-400);
+}
+.ne-mono {
+  font-family: var(--ne-font-mono);
+  font-size: var(--ne-mono-size);
+}

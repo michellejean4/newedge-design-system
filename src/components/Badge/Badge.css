@@ -1,0 +1,49 @@
+.ne-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--ne-space-1);
+  height: 20px;
+  padding: 0 var(--ne-space-2);
+  border-radius: var(--ne-radius-pill);
+  border: 1px solid transparent;
+  font-family: var(--ne-font-sans);
+  font-size: var(--ne-caption-size);
+  font-weight: var(--ne-weight-medium);
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.ne-badge__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: var(--ne-radius-pill);
+  background: currentColor;
+}
+
+/* Variants use a tinted translucent fill over the dark canvas, with a
+   solid-colored text + hairline border for legibility. */
+.ne-badge--neutral {
+  background: var(--ne-bg-3);
+  color: var(--ne-text-2);
+  border-color: var(--ne-border-1);
+}
+.ne-badge--info {
+  background: rgba(46, 107, 255, 0.15);
+  color: var(--ne-blue-300);
+  border-color: rgba(46, 107, 255, 0.35);
+}
+.ne-badge--positive {
+  background: rgba(0, 194, 129, 0.15);
+  color: var(--ne-green-400);
+  border-color: rgba(0, 194, 129, 0.35);
+}
+.ne-badge--negative {
+  background: rgba(255, 91, 110, 0.15);
+  color: var(--ne-red-400);
+  border-color: rgba(255, 91, 110, 0.35);
+}
+.ne-badge--warning {
+  background: rgba(245, 165, 36, 0.15);
+  color: var(--ne-amber-400);
+  border-color: rgba(245, 165, 36, 0.35);
+}

@@ -1,0 +1,59 @@
+.ne-card {
+  background: var(--ne-bg-1);
+  border: 1px solid var(--ne-border-0);
+  border-radius: var(--ne-radius-lg);
+  padding: var(--ne-space-6);
+  font-family: var(--ne-font-sans);
+  color: var(--ne-text-1);
+  min-width: 280px;
+}
+
+.ne-card--interactive {
+  cursor: pointer;
+  transition: border-color 140ms ease, box-shadow 140ms ease, background 140ms ease, transform 140ms ease;
+}
+.ne-card--interactive:hover {
+  background: var(--ne-bg-2);
+  border-color: var(--ne-border-1);
+  box-shadow: var(--ne-shadow-2);
+  transform: translateY(-2px);
+}
+
+.ne-card__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--ne-space-4);
+  margin-bottom: var(--ne-space-4);
+}
+
+.ne-card__heading {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ne-space-1);
+}
+
+.ne-card__eyebrow {
+  font-size: var(--ne-eyebrow-size);
+  font-weight: var(--ne-weight-semibold);
+  letter-spacing: var(--ne-eyebrow-tracking);
+  text-transform: uppercase;
+  color: var(--ne-text-2);
+}
+
+.ne-card__title {
+  margin: 0;
+  font-size: var(--ne-title-s-size);
+  font-weight: var(--ne-weight-semibold);
+  color: var(--ne-text-0);
+}
+
+.ne-card__action {
+  flex-shrink: 0;
+}
+
+.ne-card__body {
+  font-size: var(--ne-body-size);
+  line-height: var(--ne-body-line);
+  color: var(--ne-text-1);
+}

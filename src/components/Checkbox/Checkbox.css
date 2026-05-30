@@ -1,0 +1,61 @@
+.ne-check {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--ne-space-2);
+  font-family: var(--ne-font-sans);
+  font-size: var(--ne-body-size);
+  color: var(--ne-text-1);
+  cursor: pointer;
+  user-select: none;
+}
+
+.ne-check--disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* Hide the native control but keep it accessible / focusable */
+.ne-check__input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.ne-check__box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: var(--ne-radius-xs);
+  border: 1px solid var(--ne-border-2);
+  background: var(--ne-bg-2);
+  color: var(--ne-navy-0);
+  transition: background 120ms ease, border-color 120ms ease, box-shadow 120ms ease;
+}
+
+.ne-check__tick {
+  width: 14px;
+  height: 14px;
+  opacity: 0;
+  transform: scale(0.6);
+  transition: opacity 120ms ease, transform 120ms ease;
+}
+
+.ne-check__input:checked + .ne-check__box {
+  background: var(--ne-blue-500);
+  border-color: var(--ne-blue-500);
+}
+.ne-check__input:checked + .ne-check__box .ne-check__tick {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.ne-check__input:focus-visible + .ne-check__box {
+  box-shadow: var(--ne-shadow-glow);
+}
+
+.ne-check:hover .ne-check__input:not(:disabled):not(:checked) + .ne-check__box {
+  border-color: var(--ne-blue-400);
+}
